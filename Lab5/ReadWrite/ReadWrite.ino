@@ -118,7 +118,7 @@ void loop()
 {
   if(Serial.available()) // Check for availablity of data at Serial Port
   {
-    int imagen = Serial.read(); // Reading Serial Data and saving in data variable
+    imagen = Serial.read(); // Reading Serial Data and saving in data variable
     void printimage();
     Serial.println("Eliga una imagen con 1, 2 o 3: "); 
   }
