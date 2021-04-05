@@ -22,8 +22,8 @@
 #include <SD.h>
 
 File myFile;
-void printimage(int x);
-
+void printimage();
+int imagen;
 
 void setup()
 {
@@ -57,9 +57,9 @@ void setup()
  
 }
 
-void printimage(int x){
+void printimage(){
   //
-  switch (x){
+  switch (imagen){
     case 1: 
     myFile = SD.open("froggo.txt");
     if (myFile) {
@@ -116,7 +116,7 @@ void printimage(int x){
 
 void loop()
 {
-  if(Serial.available()) // Chek for availablity of data at Serial Port
+  if(Serial.available()) // Check for availablity of data at Serial Port
   {
     int imagen = Serial.read(); // Reading Serial Data and saving in data variable
     void printimage();
